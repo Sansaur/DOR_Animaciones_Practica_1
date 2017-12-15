@@ -8,6 +8,39 @@
                 display:flex;
                 justify-content: space-around;
             }
+            .cortina{
+                border: 3px solid black;
+            }
+            .cortina img{
+                width: 100%;
+                height: auto;
+            }
+            .mensaje{
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .mensaje>div{
+                border: 3px solid black;
+            }
+            .cerrar{
+                position: relative;
+                top: 0%;
+                right: 0%;
+            }
+            .flecha{
+                position: relative;
+                top: 0%;
+                right: 0%;
+            }
+            .irIzquierda{
+                transition-duration: 0.5s;
+                transform: translateX(-45%) scaleX(0.1);
+            }
+            .irDerecha{
+                transition-duration: 0.5s;
+                transform: translateX(0%) scaleX(1);
+            }
+            
             .boton-ING{
                 background-color: #ff6200;
                 border-radius: 100px;
@@ -60,6 +93,7 @@
             }
         </style>
         <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="js/script2.js"></script>
         <!--<link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-evagd.js"></script>-->
     </head>
@@ -87,8 +121,8 @@
             <div class="cortina">
                 <img src="https://i1.wp.com/www.puntogeek.com/wp-content/uploads/2010/06/StarWarsSand1-1_429x332.jpg" >  
                 <div class="mensaje">    
-                    <div class="texto">Escultura hecha de arena de playa que representa a los personajes de Starwars</div><!--
-                    --><div class="cerrar" onclick="cerrar();">&#9421;</div>    
+                    <div class="texto">Escultura hecha de arena de playa que representa a los personajes de Starwars</div>
+                    <div class="cerrar" onclick="cerrar();">&#9421;</div>    
                     <div class="flecha" onclick="abrir();">></div>
                 </div>  
             </div>
