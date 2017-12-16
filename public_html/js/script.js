@@ -5,9 +5,18 @@ $(document).ready(function () {
     // ROTACIONES
     $("#rotacion").find("p").first().hover(function () {
         $("#rotacion").find("p").first().addClass("rotacionP2");
+    },function () {
+        $("#rotacion").find("p").first().removeClass("rotacionP2");
+        $("#rotacion").find("p").first().addClass("normal2");
     });
     $("#rotacion").find("p").first().on('transitionend webkitTransitionEnd oTransitionEnd', function () {
-        $("#rotacion").find("p").last().addClass("rotacionP");
+        if($("#rotacion").find("p").first().hasClass('rotacionP2')){
+            $("#rotacion").find("p").first().removeClass("normal");
+            $("#rotacion").find("p").last().addClass("rotacionP");
+        } else {
+            $("#rotacion").find("p").first().addClass("normal");
+            $("#rotacion").find("p").last().removeClass("rotacionP");
+        }
     });
     // CARTAS
     $("#cartas").children().click(function () {

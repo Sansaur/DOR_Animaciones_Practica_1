@@ -1,11 +1,11 @@
 /*
 *
-    
+
     eventos transiciones:
 
     transition-start
     transition-end
-    
+
     eventos animaciones:
     animation-
 
@@ -24,11 +24,11 @@
 }
 .normal{
     transition-duration: 1s;
-    transform: rotateZ(2deg);
+    transform: rotateZ(0deg);
 }
 .normal2{
     transition-duration: 1s;
-    transform: rotateZ(-2deg);
+    transform: rotateZ(0deg);
 }
 
 /*** EJERCICIO 2 **/
@@ -62,7 +62,7 @@
     background-attachment: fixed;
     background-position: center;
     */
-    background-size: contain; 
+    background-size: contain;
     border: 1px solid;
     width: 400px;
     height: 250px;
