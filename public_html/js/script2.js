@@ -13,6 +13,14 @@ $(document).ready(function () {
         }
     }
     );
+    $('#textoEnviar').on('change keyup click', function(){
+        var valor = parseInt($('#textoEnviar').val()) / 2;
+        var empuje = 1280;
+        empuje = 1530 - (50*valor);
+        $('#imagenEstrellas2').css(
+            "background-position","-"+empuje+"px 0px"
+        )
+    });
 });
 
 function cerrar(){

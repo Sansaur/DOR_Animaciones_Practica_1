@@ -13,9 +13,12 @@
             }
             .cortina img{
                 width: 100%;
-                height: auto;
+                height: 100%;
             }
             .mensaje{
+                position: relative;
+                bottom:0%;
+                top: 10%;
                 display: flex;
                 flex-flow: row wrap;
             }
@@ -40,7 +43,7 @@
                 transition-duration: 0.5s;
                 transform: translateX(0%) scaleX(1);
             }
-            
+
             .boton-ING{
                 background-color: #ff6200;
                 border-radius: 100px;
@@ -49,7 +52,7 @@
             .boton-ING>p{
                 text-align: center;
             }
-            .boton-ING:hover{
+            .boton-ING:hover, .boton-ING:focus{
                 transition-duration: 0.6s;
                 transition-timing-function: ease-in-out;
                 transform: scale(1.2,1.2);
@@ -59,19 +62,29 @@
                 height: 100%;
                 animation: colorEstrellado 2s linear 0s;
                 animation-iteration-count: infinite;
-                background: url(img/rojotrampa.jpg)  no-repeat center center fixed;
+                background: url('https://luisgarciarellano.files.wordpress.com/2015/04/verde-esmeralsa.jpg') no-repeat center center fixed;
             }
             .contenedorEstrellas{
                 width: 250px;
-                height: 50px;
+                height: 3em;
                 position: absolute;
                 top: 5%;
                 left: 20%;
             }
             @keyframes colorEstrellado{
                 0% {background-position: 0px 0px;}
-                50% {background-position: -900px 0px;}
+                50% {background-position: -2000px 0px;}
                 100% {background-position: 0px 0px;}
+            }
+            #imagenEstrellas2{
+                width: 100%;
+                height: 100%;
+                background: url('https://luisgarciarellano.files.wordpress.com/2015/04/verde-esmeralsa.jpg') no-repeat center center fixed;
+                background-position: -2000px 0px;
+            }
+            .contenedorEstrellas2{
+                width: 250px;
+                height: 3em;
             }
             #imagenHombre{
                 width: 128px;
@@ -98,7 +111,15 @@
         <!--<link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-evagd.js"></script>-->
     </head>
     <body>
-
+        <div class="formulario">
+            <form action="#" method="GET">
+            <input tabindex=1 aria-labelledby="Enviar" required placeholder="(1-10)" title="introduce un número entre 1 y 10" max="10" min="1" type="number" class="texto" name="textoEnviar" id="textoEnviar">
+            <input tabindex=2 type="submit" id="Enviar" name="Enviar" class="boton" value="Enviar">
+                <div class="contenedorEstrellas2">
+                    <img id="imagenEstrellas2" alt="imagen de estrellas" src="img/estrellas5_alpha.png"/>
+                </div>
+            </form>
+        </div>
         <div class="contenedor">
             <!-- Ejercicio 3 -->
             <div class="boton-ING" tabindex=3>
@@ -119,12 +140,12 @@
             </div>
             <!-- Ejercicio 6 -->
             <div class="cortina">
-                <img src="https://i1.wp.com/www.puntogeek.com/wp-content/uploads/2010/06/StarWarsSand1-1_429x332.jpg" >  
-                <div class="mensaje">    
+                <img src="https://i1.wp.com/www.puntogeek.com/wp-content/uploads/2010/06/StarWarsSand1-1_429x332.jpg" >
+                <div class="mensaje">
                     <div class="texto">Escultura hecha de arena de playa que representa a los personajes de Starwars</div>
-                    <div class="cerrar" onclick="cerrar();">&#9421;</div>    
+                    <div class="cerrar" onclick="cerrar();">&#9421;</div>
                     <div class="flecha" onclick="abrir();">></div>
-                </div>  
+                </div>
             </div>
         </div>
 
